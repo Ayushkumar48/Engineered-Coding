@@ -20,6 +20,7 @@
     ).value;
     const thankYouMessage = document.getElementById("tqmessage");
     const hiddenIframe = document.getElementById("hidden_iframe");
+    // for email validation. Took reference from internet
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
     if (!email || !message) {
@@ -67,7 +68,12 @@
         <Textarea {...textareaprops} name="entry.1309397841" class="inputs" />
       </div>
       <div class="submit-div">
-        <button type="submit" class="btn-submit">Submit</button>
+        <button type="submit" class="btn-submit"
+          >Submit <img
+            src="../Icons/paperairplane.png"
+            alt="paperairplane"
+          /></button
+        >
       </div>
     </form>
   </div>
@@ -143,6 +149,12 @@
     border: none;
     padding: 0.5rem 2.5rem;
     border-radius: 0.375rem;
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+  }
+  img {
+    max-width: 1rem;
   }
 
   .submit-div {
