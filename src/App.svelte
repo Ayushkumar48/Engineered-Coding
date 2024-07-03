@@ -1,19 +1,21 @@
 <script>
   import Navbar from "./Navbar.svelte";
-  import HomeSec from "./HomeSec.svelte";
-  import AboutMeSec from "./AboutMeSec.svelte";
-  import MySkillsSec from "./MySkillsSec.svelte";
-  import MyProjectsSec from "./MyProjectsSec.svelte";
-  import ContactMeSec from "./ContactMeSec.svelte";
+  import Home from "./HomeSec.svelte";
+  import About from "./AboutMeSec.svelte";
+  import Skills from "./MySkillsSec.svelte";
+  import Projects from "./MyProjectsSec.svelte";
+  import Contact from "./ContactMeSec.svelte";
+  import Footer from "./Footer.svelte";
 </script>
 
 <main>
   <section><Navbar></Navbar></section>
-  <section id="home"><HomeSec></HomeSec></section>
-  <section id="about"><AboutMeSec></AboutMeSec></section>
-  <section id="skills"><MySkillsSec></MySkillsSec></section>
-  <section id="projects"><MyProjectsSec></MyProjectsSec></section>
-  <section id="contact"><ContactMeSec></ContactMeSec></section>
+  <section id="home"><Home></Home></section>
+  <section id="about"><About></About></section>
+  <section id="skills"><Skills></Skills></section>
+  <section id="projects"><Projects></Projects></section>
+  <section id="contact"><Contact></Contact></section>
+  <section><Footer></Footer></section>
 </main>
 
 <style>

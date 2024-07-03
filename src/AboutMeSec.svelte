@@ -51,7 +51,7 @@
     font-weight: 600;
     padding-bottom: 20vh;
     padding-top: 15vh;
-    background-color: #7d8b73;
+    /* background-color: #7d8b73; */
   }
   h2 {
     color: burlywood;

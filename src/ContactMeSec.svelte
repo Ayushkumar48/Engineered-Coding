@@ -56,7 +56,7 @@
           type="email"
           placeholder="name@example.com"
           name="entry.16656168"
-          class="input-email"
+          class="inputs"
         >
           <EnvelopeSolid
             slot="left"
@@ -64,11 +64,7 @@
           />
         </Input>
         <Label for="message" class="block mb-2 label">Your Message</Label>
-        <Textarea
-          {...textareaprops}
-          name="entry.1309397841"
-          class="input-email"
-        />
+        <Textarea {...textareaprops} name="entry.1309397841" class="inputs" />
       </div>
       <div class="submit-div">
         <button type="submit" class="btn-submit">Submit</button>
@@ -97,7 +93,7 @@
   section {
     padding-bottom: 30vh;
     padding-top: 28vh;
-    background-color: #71726d;
+    /* background-color: #71726d; */
   }
 
   .formouterdiv {
@@ -105,8 +101,22 @@
     justify-content: center;
   }
 
-  :global(.input-email) {
+  :global(.inputs) {
     width: 35rem;
+    border: 2px solid transparent;
+    transition: border-color 0.3s ease;
+    box-sizing: border-box;
+  }
+
+  :global(.inputs:focus) {
+    outline: none !important;
+    border-color: #4773ec;
+    --tw-ring-color: #1d4ed8;
+    --tw-ring-opacity: 1;
+  }
+
+  :global(.inputs::placeholder) {
+    font-size: 1.2rem;
   }
 
   #tqmessage {
@@ -126,6 +136,7 @@
   }
 
   .btn-submit {
+    font-size: 1.2rem;
     text-align: center;
     background-color: #1d4ed8;
     color: white;

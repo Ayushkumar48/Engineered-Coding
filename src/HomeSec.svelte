@@ -65,6 +65,9 @@
   .animate-wave {
     animation: wave 1.9s infinite;
   }
+  section {
+    padding-top: 10rem;
+  }
   .personimg {
     width: 35vw;
     height: auto;
