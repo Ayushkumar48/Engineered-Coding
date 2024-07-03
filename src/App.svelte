@@ -4,6 +4,7 @@
   import AboutMeSec from "./AboutMeSec.svelte";
   import MySkillsSec from "./MySkillsSec.svelte";
   import MyProjectsSec from "./MyProjectsSec.svelte";
+  import ContactMeSec from "./ContactMeSec.svelte";
 </script>
 
 <main>
@@ -12,6 +13,7 @@
   <AboutMeSec></AboutMeSec>
   <MySkillsSec></MySkillsSec>
   <MyProjectsSec></MyProjectsSec>
+  <ContactMeSec></ContactMeSec>
 </main>
 
 <style>
