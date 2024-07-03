@@ -67,6 +67,7 @@
   }
   section {
     padding-top: 10rem;
+    background-color: #111827;
   }
   .personimg {
     width: 35vw;

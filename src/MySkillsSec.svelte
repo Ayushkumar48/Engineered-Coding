@@ -90,7 +90,7 @@
     color: lightgray;
     padding-bottom: 25vh;
     padding-top: 20vh;
-    /* background-color: #7996a0; */
+    background-color: #111827;
   }
 
   .myskills-div {

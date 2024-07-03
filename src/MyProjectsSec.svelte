@@ -68,7 +68,7 @@
   section {
     text-align: justify;
     color: lightgray;
-    /* background-color: #b37071; */
+    background-color: #111827;
     padding-top: 20vh;
     padding-bottom: 25vh;
   }

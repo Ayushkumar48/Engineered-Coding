@@ -99,7 +99,7 @@
   section {
     padding-bottom: 30vh;
     padding-top: 28vh;
-    /* background-color: #71726d; */
+    background-color: #111827;
   }
 
   .formouterdiv {

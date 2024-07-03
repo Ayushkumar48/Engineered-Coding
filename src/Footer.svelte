@@ -12,6 +12,7 @@
   footer {
     text-align: center;
     color: #f2e1b5;
+    background-color: #111827;
   }
   .footerdiv-para {
     font-size: 1rem;
