@@ -24,11 +24,11 @@
     <NavHamburger />
     <NavUl>
       <div class="btns-div">
-        <NavLi href="/" active={true} class="navbtns">Home</NavLi>
-        <NavLi href="/about" class="navbtns">About</NavLi>
-        <NavLi href="/skills" class="navbtns">Skills</NavLi>
-        <NavLi href="/projects" class="navbtns">Projects</NavLi>
-        <NavLi href="/contact" class="navbtns">Contact</NavLi>
+        <NavLi href="#home" active={true} class="navbtns">Home</NavLi>
+        <NavLi href="#about" class="navbtns">About</NavLi>
+        <NavLi href="#skills" class="navbtns">Skills</NavLi>
+        <NavLi href="#projects" class="navbtns">Projects</NavLi>
+        <NavLi href="#contact" class="navbtns">Contact</NavLi>
       </div>
     </NavUl>
   </Navbar>

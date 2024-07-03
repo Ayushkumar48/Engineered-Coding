@@ -8,12 +8,12 @@
 </script>
 
 <main>
-  <Navbar></Navbar>
-  <HomeSec></HomeSec>
-  <AboutMeSec></AboutMeSec>
-  <MySkillsSec></MySkillsSec>
-  <MyProjectsSec></MyProjectsSec>
-  <ContactMeSec></ContactMeSec>
+  <section><Navbar></Navbar></section>
+  <section id="home"><HomeSec></HomeSec></section>
+  <section id="about"><AboutMeSec></AboutMeSec></section>
+  <section id="skills"><MySkillsSec></MySkillsSec></section>
+  <section id="projects"><MyProjectsSec></MyProjectsSec></section>
+  <section id="contact"><ContactMeSec></ContactMeSec></section>
 </main>
 
 <style>
