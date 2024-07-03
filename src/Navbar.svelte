@@ -5,9 +5,6 @@
     NavLi,
     NavUl,
     NavHamburger,
-    ImagePlaceholder,
-    Skeleton,
-    TextPlaceholder,
   } from "flowbite-svelte";
 </script>
 
@@ -29,8 +26,8 @@
       <div class="btns-div">
         <NavLi href="/" active={true} class="navbtns">Home</NavLi>
         <NavLi href="/about" class="navbtns">About</NavLi>
-        <NavLi href="/docs/components/navbar" class="navbtns">Navbar</NavLi>
-        <NavLi href="/pricing" class="navbtns">Pricing</NavLi>
+        <NavLi href="/docs/components/navbar" class="navbtns">Skills</NavLi>
+        <NavLi href="/pricing" class="navbtns">Projects</NavLi>
         <NavLi href="/contact" class="navbtns">Contact</NavLi>
       </div>
     </NavUl>
