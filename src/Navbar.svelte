@@ -40,7 +40,7 @@
       <NavBrand href="/">
         <a href="https://engineeredcoding.me/" class="navbar-brand">
           <img
-            src="/Icons/mylogo.png"
+            src="../public/Icons/mylogo.png"
             class="navbar-logo"
             alt="Engineered Coding Logo"
           />
