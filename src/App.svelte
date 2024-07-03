@@ -19,4 +19,7 @@
 </main>
 
 <style>
+  main {
+    background-color: #111827;
+  }
 </style>
