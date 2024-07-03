@@ -2,7 +2,7 @@
 
 # Engineered Coding - Portfolio Website
 
-Welcome to the repository for my personal portfolio website, [Engineered Coding](https://engineeredcoding.com). This site showcases my projects, skills, and experiences as a software developer. Feel free to explore, fork, and contribute!
+Welcome to the repository for my personal portfolio website, [Engineered Coding](https://engineeredcoding.me). This site showcases my projects, skills, and experiences as a software developer. Feel free to explore, fork, and contribute!
 
 ## Table of Contents
 
