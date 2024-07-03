@@ -1,6 +1,14 @@
 <script>
   import { Label, Input, Textarea } from "flowbite-svelte";
   import { EnvelopeSolid } from "flowbite-svelte-icons";
+  import ToasterSuccess from "./Toaster-success.svelte";
+  import ToasterEmailFailure from "./Toaster-invalidemail.svelte";
+  import ToasterWriteBoth from "./Toaster-writeboth.svelte";
+  import { fade } from "svelte/transition";
+
+  let showSuccess = false;
+  let showEmailFailure = false;
+  let showWriteBoth = false;
 
   let textareaprops = {
     id: "message",
@@ -13,31 +21,44 @@
   function handleFormSubmit(event) {
     event.preventDefault();
 
+    // Hide the toasts initially
+    showEmailFailure = false;
+    showWriteBoth = false;
+
     const form = event.target;
     const email = form.querySelector('input[name="entry.16656168"]').value;
     const message = form.querySelector(
       'textarea[name="entry.1309397841"]'
     ).value;
-    const thankYouMessage = document.getElementById("tqmessage");
-    const hiddenIframe = document.getElementById("hidden_iframe");
-    // for email validation. Took reference from internet
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
     if (!email || !message) {
-      alert("Please fill in both the email and message fields.");
+      showWriteBoth = true;
       return;
     }
     if (!emailRegex.test(email)) {
-      alert("Please enter a valid email address.");
+      showEmailFailure = true;
       return;
     }
 
-    hiddenIframe.onload = function () {
-      thankYouMessage.style.display = "block";
-      form.reset();
-    };
     form.submit();
   }
+
+  function handleIframeLoad() {
+    showSuccess = true;
+    const form = document.querySelector("form");
+    setTimeout(() => {
+      showSuccess = false;
+      if (form) {
+        form.reset();
+      }
+    }, 3000);
+  }
+
+  window.onload = () => {
+    const iframe = document.getElementById("hidden_iframe");
+    iframe.addEventListener("load", handleIframeLoad);
+  };
 </script>
 
 <section>
@@ -76,16 +97,28 @@
         >
       </div>
     </form>
+    <iframe
+      name="hidden_iframe"
+      id="hidden_iframe"
+      style="display:none;"
+      title="for form"
+    ></iframe>
+    {#if showSuccess}
+      <div id="success" transition:fade={{ duration: 500 }}>
+        <ToasterSuccess></ToasterSuccess>
+      </div>
+    {/if}
+    {#if showEmailFailure}
+      <div id="inavalidemail" transition:fade={{ duration: 500 }}>
+        <ToasterEmailFailure></ToasterEmailFailure>
+      </div>
+    {/if}
+    {#if showWriteBoth}
+      <div id="writeboth" transition:fade={{ duration: 500 }}>
+        <ToasterWriteBoth></ToasterWriteBoth>
+      </div>
+    {/if}
   </div>
-  <iframe
-    name="hidden_iframe"
-    id="hidden_iframe"
-    style="display:none;"
-    title="Hidden iframe for form submission"
-  ></iframe>
-  <p id="tqmessage">
-    Thank you for your message!<br />I will get back to you soon.
-  </p>
 </section>
 
 <style>
@@ -125,13 +158,6 @@
     font-size: 1.2rem;
   }
 
-  #tqmessage {
-    display: none;
-    text-align: center;
-    padding-top: 2rem;
-    font-size: 1.4rem;
-  }
-
   :global(.label) {
     font-size: 1.2rem;
     margin-top: 2.3vh;
@@ -153,6 +179,7 @@
     align-items: center;
     gap: 0.3rem;
   }
+
   img {
     max-width: 1rem;
   }
