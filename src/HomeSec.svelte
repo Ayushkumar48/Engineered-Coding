@@ -20,7 +20,7 @@
       </div>
       <div class="flex btndiv">
         <a
-          href="https://drive.google.com/file/d/1kUZHy51GI0-EzH7LkTCG5-pXYmV7nvst/view?usp=sharing"
+          href="https://drive.google.com/file/d/1hAdj2s2JYUDaTahYhEln4a5Uk85GKQKH/view?usp=drive_link"
           target="_blank"
         >
           <Button class="btns" color="none">
