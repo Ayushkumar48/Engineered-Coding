@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 @font-face {
-  font-family: 'Beiruti', sans-serif;
+  font-family: 'Beiruti';
   src: url('/Fonts/Beiruti.ttf') format('truetype');
 }
 
