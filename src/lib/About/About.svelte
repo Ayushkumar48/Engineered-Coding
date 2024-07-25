@@ -1,8 +1,8 @@
 <script>
-  import "flowbite/dist/flowbite.min.css";
+  import { scrollRef } from "svelte-scrolling";
 </script>
 
-<section id="about-me">
+<section use:scrollRef={"about"}>
   <h2>About Me</h2>
   <p>Hi, I'm Ayush Kumar</p>
   <p>
@@ -21,14 +21,14 @@
     problems (continuously solving), I have honed my problem-solving skills,
     which are crucial for efficient software development.
   </p>
-  <p class="section-title">Current Learning</p>
+  <p class="subsection">Current Learning</p>
   <p>
     Currently, I am diving deeper into Svelte and Node.js for web development.
     These technologies are at the forefront of modern web applications, and I am
     excited to leverage their power to create dynamic and efficient web
     solutions.
   </p>
-  <p class="section-title">Personal Philosophy</p>
+  <p class="subsection">Personal Philosophy</p>
   <p>
     I believe in continuous improvement and lifelong learning. The tech industry
     evolves rapidly, and staying updated with the latest trends and technologies
@@ -43,27 +43,23 @@
 
 <style>
   section {
-    font-family: "Beiruti", sans-serif;
-    padding-left: 10vw;
-    padding-right: 12vw;
-    text-align: justify;
+    min-height: 100vh;
     color: lightgray;
     font-weight: 600;
-    padding-bottom: 20vh;
-    padding-top: 15vh;
-    background-color: #111827;
+    text-align: justify;
+    padding: 12vh 6vw 20vh 5vw;
   }
   h2 {
     color: burlywood;
-    font-size: 3.5rem;
+    font-size: 3.2rem;
     font-weight: bold;
   }
   p {
     color: #f8f7e5;
-    font-size: 1.65rem;
+    font-size: 1.58rem;
   }
-  .section-title {
-    font-size: 2.3rem;
+  .subsection {
+    font-size: 1.9rem;
     color: #ede781;
     font-weight: 700;
   }

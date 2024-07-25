@@ -1,13 +1,15 @@
 <script>
   import { onMount } from "svelte";
 
-  let words = [
+  const words = [
     "Data Structures",
     "Algorithms",
-    "Web Development",
-    "SQL",
-    "C++ with STL",
+    "C++",
     "JavaScript",
+    "FrontEnd Development",
+    "SQL",
+    "MongoDB",
+    "BackEnd Development",
     "Python",
   ];
 
@@ -30,7 +32,9 @@
           if (currentWord.length === words[currentIndex].length) {
             adding = false;
             pause = true;
-            setTimeout(() => (pause = false), 1200);
+            setTimeout(() => {
+              pause = false;
+            }, 1200);
           }
         } else {
           currentWord = currentWord.slice(0, -1);
@@ -38,7 +42,9 @@
             adding = true;
             pause = true;
             currentIndex = (currentIndex + 1) % words.length;
-            setTimeout(() => (pause = false), 200);
+            setTimeout(() => {
+              pause = false;
+            }, 200);
           }
         }
       }
@@ -46,4 +52,4 @@
   }
 </script>
 
-<span>{currentWord}</span>
+<span> {currentWord}</span>

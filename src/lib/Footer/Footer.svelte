@@ -1,4 +1,4 @@
-<footer class="footer">
+<footer>
   <hr />
   <div class="footer-outerdiv">
     <p class="footerdiv-para">&#169; Engineered Coding. All rights reserved</p>
@@ -13,6 +13,9 @@
     text-align: center;
     color: #f2e1b5;
     background-color: #111827;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
   }
   .footerdiv-para {
     font-size: 1rem;

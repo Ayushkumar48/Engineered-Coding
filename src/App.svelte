@@ -1,25 +1,21 @@
 <script>
-  import Navbar from "./Navbar.svelte";
-  import Home from "./HomeSec.svelte";
-  import About from "./AboutMeSec.svelte";
-  import Skills from "./MySkillsSec.svelte";
-  import Projects from "./MyProjectsSec.svelte";
-  import Contact from "./ContactMeSec.svelte";
-  import Footer from "./Footer.svelte";
+  import Navbar from "./lib/Navbar/Navbar.svelte";
+  import Home from "./lib/Home/Home.svelte";
+  import About from "./lib/About/About.svelte";
+  import Skills from "./lib/Skills/Skills.svelte";
+  import Projects from "./lib/Projects/Projects.svelte";
+  import LeetCode from "./lib/Profiles/Profiles.svelte";
+  import Contact from "./lib/Contact/Contact.svelte";
+  import Footer from "./lib/Footer/Footer.svelte";
 </script>
 
-<main>
-  <section><Navbar></Navbar></section>
-  <section id="home"><Home></Home></section>
-  <section id="about"><About></About></section>
-  <section id="skills"><Skills></Skills></section>
-  <section id="projects"><Projects></Projects></section>
-  <section id="contact"><Contact></Contact></section>
-  <section><Footer></Footer></section>
-</main>
-
-<style>
-  main {
-    background-color: #111827;
-  }
-</style>
+<div>
+  <Navbar />
+  <Home />
+  <About />
+  <Skills />
+  <Projects />
+  <LeetCode />
+  <Contact />
+  <Footer />
+</div>

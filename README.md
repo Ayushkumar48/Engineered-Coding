@@ -1,94 +1,47 @@
----
+# Svelte + Vite
 
-# Engineered Coding - Portfolio Website
+This template should help get you started developing with Svelte in Vite.
 
-Welcome to the repository for my personal portfolio website, [Engineered Coding](https://engineeredcoding.me). This site showcases my projects, skills, and experiences as a software developer. Feel free to explore, fork, and contribute!
+## Recommended IDE Setup
 
-## Table of Contents
+[VS Code](https://code.visualstudio.com/) + [Svelte](https://marketplace.visualstudio.com/items?itemName=svelte.svelte-vscode).
 
-- [About](#about)
-- [Technologies Used](#technologies-used)
-- [Features](#features)
-- [Getting Started](#getting-started)
-- [Usage](#usage)
-- [Contributing](#contributing)
-- [License](#license)
-- [Contact](#contact)
+## Need an official Svelte framework?
 
-## About
+Check out [SvelteKit](https://github.com/sveltejs/kit#readme), which is also powered by Vite. Deploy anywhere with its serverless-first approach and adapt to various platforms, with out of the box support for TypeScript, SCSS, and Less, and easily-added support for mdsvex, GraphQL, PostCSS, Tailwind CSS, and more.
 
-Engineered Coding is my personal portfolio website designed to highlight my work and achievements in the field of software development.
+## Technical considerations
 
-## Technologies Used
+**Why use this over SvelteKit?**
 
-- **Framework**: Svelte.js
-- **CSS Framework**: Tailwind CSS
-- **UI Components**: Flowbite
-- **Build Tool**: Vite
+- It brings its own routing solution which might not be preferable for some users.
+- It is first and foremost a framework that just happens to use Vite under the hood, not a Vite app.
 
-## Features
+This template contains as little as possible to get started with Vite + Svelte, while taking into account the developer experience with regards to HMR and intellisense. It demonstrates capabilities on par with the other `create-vite` templates and is a good starting point for beginners dipping their toes into a Vite + Svelte project.
 
-- Responsive design
-- Project showcase
-- Skills and experience sections
-- Contact form
+Should you later need the extended capabilities and extensibility provided by SvelteKit, the template has been structured similarly to SvelteKit so that it is easy to migrate.
 
-## Getting Started
+**Why `global.d.ts` instead of `compilerOptions.types` inside `jsconfig.json` or `tsconfig.json`?**
 
-To get a local copy up and running, follow these steps.
+Setting `compilerOptions.types` shuts out all other types not explicitly listed in the configuration. Using triple-slash references keeps the default TypeScript setting of accepting type information from the entire workspace, while also adding `svelte` and `vite/client` type information.
 
-### Prerequisites
+**Why include `.vscode/extensions.json`?**
 
-- Node.js (v14 or higher)
-- npm (v6 or higher)
+Other templates indirectly recommend extensions via the README, but this file allows VS Code to prompt the user to install the recommended extension upon opening the project.
 
-### Installation
+**Why enable `checkJs` in the JS template?**
 
-1. Clone the repository
-   ```sh
-   git clone https://github.com/Ayushkumar48/Engineered-Coding.git
-   ```
-2. Navigate to the project directory
-   ```sh
-   cd Engineered-Coding
-   ```
-3. Install dependencies
-   ```sh
-   npm install
-   ```
+It is likely that most cases of changing variable types in runtime are likely to be accidental, rather than deliberate. This provides advanced typechecking out of the box. Should you like to take advantage of the dynamically-typed nature of JavaScript, it is trivial to change the configuration.
 
-## Usage
+**Why is HMR not preserving my local component state?**
 
-To start the development server, run:
+HMR state preservation comes with a number of gotchas! It has been disabled by default in both `svelte-hmr` and `@sveltejs/vite-plugin-svelte` due to its often surprising behavior. You can read the details [here](https://github.com/sveltejs/svelte-hmr/tree/master/packages/svelte-hmr#preservation-of-local-state).
 
-```sh
-npm run dev
+If you have state that's important to retain within a component, consider creating an external store which would not be replaced by HMR.
+
+```js
+// store.js
+// An extremely simple external store
+import { writable } from 'svelte/store'
+export default writable(0)
 ```
-
-To build the project for production, run:
-
-```sh
-npm run build
-```
-
-## Contributing
-
-Contributions are what make the open-source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
-
-1. Fork the project
-2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the branch (`git push origin feature/AmazingFeature`)
-5. Open a pull request
-
-## License
-
-Distributed under the MIT License. See `LICENSE` for more information.
-
-## Contact
-
-Ayush Kumar - [ayushsuperstar48@gmail.com](mailto:ayushsuperstar48@gmail.com)
-
-Project Link: [https://github.com/Ayushkumar48/Engineered-Coding](https://github.com/Ayushkumar48/Engineered-Coding)
-
----
