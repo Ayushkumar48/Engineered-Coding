@@ -24,7 +24,7 @@
     justify-content: center;
     gap: 1.1vw;
     transition: transform 0.4s ease;
-    padding: 1vh 1.5vw;
+    padding: 1vh 1.2vw;
   }
 
   .skill-card:hover {

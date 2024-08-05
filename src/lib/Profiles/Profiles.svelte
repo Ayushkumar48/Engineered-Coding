@@ -2,17 +2,13 @@
   <div>
     <span>
       <h2>LeetCode</h2>
-      <embed
-        src="https://leetcard.jacoblin.cool/Ayushkumar48?theme=nord&extension=heatmap"
-        width="600"
-        height="400"
-      />
+      <embed src={import.meta.env.VITE_LEETCODE_API} width="600" height="400" />
     </span>
     <span>
       <h2>GitHub Heatmap</h2>
       <div class="github">
         <img
-          src="https://ghchart.rshah.org/409ba5/Ayushkumar48"
+          src={import.meta.env.VITE_GITHUB_API}
           alt="githubheatmap"
           draggable={false}
         />

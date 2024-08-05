@@ -5,10 +5,11 @@
   import { toast, Toaster } from "svelte-french-toast";
 
   let formSubmitted = false;
+  const googleform = import.meta.env.VITE_GOOGLE_FORM_URL;
 
   function handleIframeLoad() {
     if (formSubmitted) {
-      toast.promise(new Promise((resolve) => setTimeout(resolve, 1000)), {
+      toast.promise(new Promise((resolve) => setTimeout(resolve, 500)), {
         loading: "Sending...",
         success: "Form sent successfully!!",
         error: "Error occured...",
@@ -32,7 +33,7 @@
 <div>
   <form
     method="POST"
-    action="https://docs.google.com/forms/d/e/1FAIpQLSdvE3WK83PkgkUYPx6KTKyyHgxAAfp8c5CRaC0POGIhYXftfA/formResponse"
+    action={googleform}
     target="hidden_iframe"
     on:submit={handleSubmit}
   >

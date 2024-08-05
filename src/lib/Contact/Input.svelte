@@ -40,6 +40,7 @@
     width: 25px;
     left: 8px;
     top: 50%;
+    opacity: 0.4;
     transform: translateY(-50%);
     pointer-events: none;
   }

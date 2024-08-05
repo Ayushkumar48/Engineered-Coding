@@ -28,6 +28,11 @@
       name: "Node.js",
     },
     {
+      src: "./Icons/MySkills-Icons/express.svg",
+      alt: "express",
+      name: "Express.JS",
+    },
+    {
       src: "./Icons/MySkills-Icons/git.png",
       alt: "git",
       name: "Git",
@@ -48,14 +53,19 @@
       name: "MongoDB",
     },
     {
-      src: "./Icons/MySkills-Icons/html.png",
-      alt: "html",
-      name: "HTML",
+      src: "./Icons/MySkills-Icons/postman.svg",
+      alt: "postman",
+      name: "Postman",
     },
     {
-      src: "./Icons/MySkills-Icons/css.png",
-      alt: "css",
-      name: "CSS",
+      src: "./Icons/MySkills-Icons/restapi.svg",
+      alt: "restapi",
+      name: "REST API",
+    },
+    {
+      src: "./Icons/MySkills-Icons/ubuntu.svg",
+      alt: "ubuntu",
+      name: "Linux / Ubuntu",
     },
     {
       src: "./Icons/MySkills-Icons/tailwind.png",
@@ -68,9 +78,29 @@
       name: "Flowbite UI",
     },
     {
-      src: "./Icons/MySkills-Icons/bootstrap.png",
-      alt: "bootstrap",
-      name: "Bootstrap",
+      src: "./Icons/MySkills-Icons/aws.svg",
+      alt: "AWS",
+      name: "AWS",
+    },
+    {
+      src: "./Icons/MySkills-Icons/azure.svg",
+      alt: "Azure",
+      name: "AZURE",
+    },
+    {
+      src: "./Icons/MySkills-Icons/cn.svg",
+      alt: "CN",
+      name: "Computer Networking",
+    },
+    {
+      src: "./Icons/MySkills-Icons/dsa.svg",
+      alt: "dsa",
+      name: "DSA",
+    },
+    {
+      src: "./Icons/MySkills-Icons/oops.svg",
+      alt: "oops",
+      name: "OOPS",
     },
   ];
 </script>
@@ -94,7 +124,7 @@
     align-items: center;
     color: lightgray;
     min-height: 100vh;
-    margin: 0 9vw;
+    margin: 0 8vw;
   }
   h2 {
     font-size: 3.5rem;

@@ -3,7 +3,7 @@
   let icons = [
     {
       src: "./Icons/resumeicon.png",
-      dest: "https://drive.google.com/file/d/1eRvIBpEfGhkBcxoB_GGxqkXXWkNCRhvK/view?usp=sharing",
+      dest: "https://drive.google.com/file/d/1Y5vGRtIV3tcg_Du1T9EsmcYmba-ru-AP/view?usp=drive_link",
       alt: "resume",
     },
     {
