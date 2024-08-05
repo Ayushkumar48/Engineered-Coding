@@ -5,7 +5,7 @@
   import { toast, Toaster } from "svelte-french-toast";
 
   let formSubmitted = false;
-  const googleform = import.meta.env.VITE_GOOGLE_FORM_URL;
+  const googleform = import.meta.env.GOOGLE_FORM_URL;
 
   function handleIframeLoad() {
     if (formSubmitted) {
