@@ -1,3 +1,4 @@
+// api/secret.js
 export default async function handler(req, res) {
   const apis = {
     googleFormUrl: process.env.GOOGLE_FORM_URL,
