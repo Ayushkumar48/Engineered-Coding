@@ -1,15 +1,18 @@
 <script>
   import { onMount } from "svelte";
+  let data = {};
+
   const fetchData = async () => {
     try {
       const response = await fetch("/api/secret");
       if (!response.ok) throw new Error("Network response was not ok");
-      const data = await response.json();
+      data = await response.json();
       console.log(data);
     } catch (error) {
       console.error("Error fetching data:", error);
     }
   };
+
   onMount(() => {
     fetchData();
   });
@@ -19,21 +22,12 @@
   <div>
     <span>
       <h2>LeetCode</h2>
-      <embed
-        src={import.meta.env.VITE_LEETCODE_API}
-        width="600"
-        height="400"
-        type="image/png"
-      />
+      <embed src={data.leetcodeApi} width="600" height="400" type="image/png" />
     </span>
     <span>
       <h2>GitHub Heatmap</h2>
       <div class="github">
-        <img
-          src={import.meta.env.VITE_GITHUB_API}
-          alt="GitHub Heatmap"
-          draggable={false}
-        />
+        <img src={data.githubApi} alt="GitHub Heatmap" draggable={false} />
       </div>
     </span>
   </div>

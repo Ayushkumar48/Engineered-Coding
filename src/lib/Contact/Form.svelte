@@ -3,16 +3,32 @@
   import Textarea from "./Textarea.svelte";
   import Submit from "./Submit.svelte";
   import { toast, Toaster } from "svelte-french-toast";
+  import { onMount } from "svelte";
+  let data = {};
+
+  const fetchData = async () => {
+    try {
+      const response = await fetch("/api/secret");
+      if (!response.ok) throw new Error("Network response was not ok");
+      data = await response.json();
+      console.log(data);
+    } catch (error) {
+      console.error("Error fetching data:", error);
+    }
+  };
+
+  onMount(() => {
+    fetchData();
+  });
 
   let formSubmitted = false;
-  const googleform = import.meta.env.VITE_GOOGLE_FORM_URL;
 
   function handleIframeLoad() {
     if (formSubmitted) {
       toast.promise(new Promise((resolve) => setTimeout(resolve, 500)), {
         loading: "Sending...",
         success: "Form sent successfully!!",
-        error: "Error occured...",
+        error: "Error occurred...",
       });
 
       const form = document.querySelector("form");
@@ -33,7 +49,7 @@
 <div>
   <form
     method="POST"
-    action={googleform}
+    action={data.googleFormUrl}
     target="hidden_iframe"
     on:submit={handleSubmit}
   >
