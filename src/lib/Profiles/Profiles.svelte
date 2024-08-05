@@ -1,15 +1,37 @@
+<script>
+  import { onMount } from "svelte";
+  const fetchData = async () => {
+    try {
+      const response = await fetch("/api/fetchData");
+      if (!response.ok) throw new Error("Network response was not ok");
+      const data = await response.json();
+      console.log(data);
+    } catch (error) {
+      console.error("Error fetching data:", error);
+    }
+  };
+  onMount(() => {
+    fetchData();
+  });
+</script>
+
 <main>
   <div>
     <span>
       <h2>LeetCode</h2>
-      <embed src={import.meta.env.LEETCODE_API} width="600" height="400" />
+      <embed
+        src={import.meta.env.VITE_LEETCODE_API}
+        width="600"
+        height="400"
+        type="image/png"
+      />
     </span>
     <span>
       <h2>GitHub Heatmap</h2>
       <div class="github">
         <img
-          src={import.meta.env.GITHUB_API}
-          alt="githubheatmap"
+          src={import.meta.env.VITE_GITHUB_API}
+          alt="GitHub Heatmap"
           draggable={false}
         />
       </div>
