@@ -2,15 +2,11 @@
   import { skills } from "./store";
 
   export let skill;
-  let img;
-  if (skill.alt === "golang") {
-    img = "scale-150";
-  }
 </script>
 
 <span class="skill-card" on:selectstart={(e) => e.preventDefault()}>
   <span class="skill-img">
-    <img src={skill.src} alt={skill.alt} draggable="false" class={img} />
+    <img src={skill.src} alt={skill.alt} draggable="false" class={skill?.img} />
   </span>
   <p>{skill.name}</p>
 </span>
