@@ -13,6 +13,14 @@
       <EachProject {project} />
     {/each}
   </div>
+  <div class="text-xl">
+    <div>And many more. To see all the projects I build,</div>
+    <a
+      href="https://github.com/Ayushkumar48/"
+      target="_blank"
+      class="underline text-blue-600">click here</a
+    >
+  </div>
 </section>
 
 <style>
